@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birding Index</title>
+  </head>
+  <body>
+    <h1>Birding Notes List</h1>
+    <ul>
+      <% notes.forEach(note => { %>
+      <li>Note <%= note.id %></li>
+      <p>Habitat: <%= note.habitat %></p>
+      <p>Date: <%= note.date %></p>
+      <p>Appearance: <%= note.appearance %></p>
+      <p>Behaviour: <%= note.behaviour %></p>
+      <p>Vocalisation: <%= note.vocalisation %></p>
+      <p>Flock Size: <%= note.flock_size %></p>
+      <% }) %>
+    </ul>
+  </body>
+</html>
