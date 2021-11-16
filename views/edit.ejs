@@ -4,33 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Note</title>
+    <title>Edit Note</title>
   </head>
   <body>
-    <h1>New Note!</h1>
-    <form action="/note" method="POST">
+    <h1>Edit Note</h1>
+    <form action="/note/<%= Number(id) - 1 %>?_method=PUT" method="POST">
       <label for="habitat">Habitat:</label><br />
-      <input type="text" id="habitat" name="habitat" required /><br />
+      <input type="text" id="habitat" name="habitat" value="<%= habitat %>" required /><br />
 
       <label for="date">Date:</label><br />
-      <input type="text" id="date" name="date" required /><br />
+      <input type="text" id="date" name="date" value="<%= date %>" required /><br />
 
       <label for="appearance">Appearance:</label><br />
-      <input type="text" id="appearance" name="appearance" required /><br />
+      <input type="text" id="appearance" name="appearance" value="<%= appearance %>" required /><br />
 
       <label for="behaviour">Behaviour:</label><br />
-      <input type="text" id="behaviour" name="behaviour" required /><br />
+      <input type="text" id="behaviour" name="behaviour" value="<%= behaviour %>" required /><br />
 
       <label for="vocalisation">Vocalisation:</label><br />
       <input
         type="text"
         id="vocalisation"
         name="vocalisation"
+        value="<%= vocalisation %>" 
         required
       /><br />
 
       <label for="flock_size">Flock Size:</label><br />
-      <input type="text" id="flock_size" name="flock_size" required /><br />
+      <input type="text" id="flock_size" name="flock_size" value="<%= flock_size %>" required /><br />
 
       <input type="submit" value="Submit" />
     </form>
